@@ -30,6 +30,7 @@ public class Environment {
     }
 
     private static Organization organization {
+        String transactionId = "Some number here";
         get {
             if(organization == null) organization = [SELECT Id, InstanceName, IsSandbox, Name, OrganizationType FROM Organization];
             return organization;
